@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+
+@model Client.ViewModells.UserViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Crear</title>
+</head>
+<body>
+    @using (Html.BeginForm("Create", "User"))
+    {
+        <table cellpadding="2" cellspacing="2">
+            <tr>
+                <td>@Html.LabelFor(model => model.user.clave)</td>
+                <td>@Html.TextBoxFor(model => model.user.clave)</td>
+            </tr>
+
+            <tr>
+                <td>@Html.LabelFor(model => model.user.nombre)</td>
+                <td>@Html.TextBoxFor(model => model.user.nombre)</td>
+            </tr>
+
+            <tr>
+                <td>@Html.LabelFor(model => model.user.correo)</td>
+                <td>@Html.TextBoxFor(model => model.user.correo)</td>
+            </tr>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Guardar" /></td>
+            </tr>
+        </table>
+    }
+</body>
+</html>
+

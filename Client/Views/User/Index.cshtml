@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <a href="@Url.Action("Create","User")">Agregar Usuario</a>
+    <br /><br />
+    <table cellpadding="2" cellspacing="2" border="1">
+        <tr>
+            <th>id</th>
+            <th>clave</th>
+            <th>nombre</th>
+            <th>correo</th>
+            <th>Option</th>
+        </tr>
+        @foreach (var user in ViewBag.listProducts)
+        {
+            <tr>
+
+                <td>@user.id</td>
+                <td>@user.clave</td>
+                <td>@user.nombre</td>
+                <td>@user.correo</td>
+
+                <td>
+                    
+                    <a href="@Url.Action("Edit","User", new { id= user.id})">Editar</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>

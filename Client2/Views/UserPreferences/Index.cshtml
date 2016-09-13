@@ -1,0 +1,39 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <a href="@Url.Action("Create","UserPreferences")">Add new</a>
+    <br /><br />
+    <table cellpadding="2" cellspacing="2" border="1">
+        <tr>
+            <th>id_usr</th>
+            <th>id_preferencias</th>
+            
+            <th>Option</th>
+        </tr>
+        @foreach (var usr_prf  in ViewBag.listProducts)
+        {
+            <tr>
+
+                <td>@usr_prf.id</td>
+                <td>@usr_prf.id_pref</td>
+                
+
+                <td>
+                   
+                    <a href="@Url.Action("Edit","UserPreferences", new { id= usr_prf.id})">Editar</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>
