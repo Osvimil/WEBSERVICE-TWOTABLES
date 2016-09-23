@@ -111,13 +111,10 @@
     </Content>
     <Content Include="scripts\ai.0.22.19-build00125.js" />
     <Content Include="scripts\ai.0.22.19-build00125.min.js" />
-    <Content Include="Service3.svc" />
     <Content Include="Service1.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IService3.cs" />
-    <Compile Include="IService2 .cs" />
     <Compile Include="ModelTables.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -137,11 +134,6 @@
       <DependentUpon>ModelTables.tt</DependentUpon>
     </Compile>
     <Compile Include="Prueba.cs" />
-    <Compile Include="Prueba3.cs" />
-    <Compile Include="Prueba2.cs" />
-    <Compile Include="Service3.svc.cs">
-      <DependentUpon>Service3.svc</DependentUpon>
-    </Compile>
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>

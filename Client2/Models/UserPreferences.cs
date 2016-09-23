@@ -10,7 +10,7 @@ namespace Client2.Models
     {
 
         [Display(Name = "id_usr")]
-        public int id
+        public int id_usr
         {
             get;
             set;

@@ -11,13 +11,14 @@ namespace Client2.Models
 {
     public class UserPreferenceServiceClient
     {
-        private string BASE_URL = "http://localhost:3279/Service3.svc/";
-        public List<UserPreferences> findAll()
+        
+        private string BASE_URL = "http://localhost:3279/Service1.svc/";
+        public List<UserPreferences> trouverTout()
         {
             try
             {
                 var webcliente = new WebClient();
-                var json = webcliente.DownloadString(BASE_URL + "findall");
+                var json = webcliente.DownloadString(BASE_URL + "encontrarTodo");
                 var js = new JavaScriptSerializer();
                 return js.Deserialize<List<UserPreferences>>(json);
             }
@@ -30,12 +31,12 @@ namespace Client2.Models
 
 
 
-    public UserPreferences find(string id)
+    public UserPreferences trouver(string id)
     {
         try
         {
             var webcliente = new WebClient();
-            string url = string.Format(BASE_URL + "find/{0}", id);
+            string url = string.Format(BASE_URL + "encontrar/{0}", id);
             var json = webcliente.DownloadString(url);
             var js = new JavaScriptSerializer();
             return js.Deserialize<UserPreferences>(json);

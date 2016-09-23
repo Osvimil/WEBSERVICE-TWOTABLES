@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UsuariosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="usuario_preferencias">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+      <PropertyRef Name="id_preferencias" />
+    </Key>
+    <Property Name="id_usuario" Type="Int32" Nullable="false" />
+    <Property Name="id_preferencias" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="UsuariosPreferencias" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="usuario_preferencias" EntityType="Self.usuario_preferencias" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UsuariosModelStoreContainer" CdmEntityContainer="UsuariosPreferencias">
+    <EntitySetMapping Name="usuario_preferencias">
+      <EntityTypeMapping TypeName="UsuariosModel.usuario_preferencias">
+        <MappingFragment StoreEntitySet="usuario_preferencias">
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="id_preferencias" ColumnName="id_preferencias" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

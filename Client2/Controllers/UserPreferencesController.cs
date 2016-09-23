@@ -14,7 +14,7 @@ namespace Client2.Controllers
         public ActionResult Index()
         {
             UserPreferenceServiceClient psc = new UserPreferenceServiceClient();
-            ViewBag.listProducts = psc.findAll();
+            ViewBag.listProducts = psc.trouverTout();
             return View();
         }
 
@@ -37,7 +37,7 @@ namespace Client2.Controllers
         {
             UserPreferenceServiceClient psc = new UserPreferenceServiceClient();
             UserPreferencesViewModel pvm = new UserPreferencesViewModel();
-            pvm.us_pr = psc.find(id);
+            pvm.us_pr = psc.trouver(id);
             return View("Edit", pvm);
         }
         [HttpPost]

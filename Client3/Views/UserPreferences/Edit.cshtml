@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+
+@model Client3.ViewModells.UserPreferencesViewModel
+
+
+    <!DOCTYPE html>
+<html>
+<head>
+    
+    <meta name="viewport" content="width=device-width" />
+    <title>Editar</title>
+</head>
+<body>
+
+    @using (Html.BeginForm("Edit", "UserPreferences"))
+    {
+        <table cellpadding="2" cellspacing="2">
+
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.user_pref.id_usuario)
+                </td>
+                <td>@Html.TextBoxFor(model => model.user_pref.id_usuario)
+                    
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.user_pref.id_preferencias)
+                </td>
+                <td>@Html.TextBoxFor(model => model.user_pref.id_preferencias)</td>
+            </tr>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Guardar" /></td>
+            </tr>
+        </table>
+    }
+</body>
+</html>
+
+
+
